@@ -7,4 +7,8 @@ cat > README.md << EOF
 
 EOF
 
-'%s %s\n' "$(date)" >> README.md
+timestamp() {
+  date +"%T"
+}
+
+timestamp >> README.md
