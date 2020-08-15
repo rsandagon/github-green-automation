@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat > README.md << EOF
+cat > generatedDoc.md << EOF
 ## Generated md files from commit
 
 * Generated random hash from date:
@@ -11,4 +11,4 @@ timestamp() {
   date +"%T"
 }
 
-timestamp >> README.md
+timestamp >> generatedDoc.md
