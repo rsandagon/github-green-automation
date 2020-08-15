@@ -5,7 +5,7 @@ on:
     branches:
       - master
   schedule:
-    - cron:  '0 */15 * * *'
+    - cron:  '0 * * * *'
 
 jobs:
 
@@ -16,17 +16,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Setup Python Environment
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.7
-
-      - name: Install Requirements
-        run: pip install -r requirements.txt
-
-      - name: Execute Python script
+      - name: create a file
         run: |
-          python scripts/update.py
+          chmod +x ./scripts/createFile.sh
+          ./scripts/createFile.sh
 
       - name: setup git config
         run: |
