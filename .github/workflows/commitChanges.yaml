@@ -1,4 +1,4 @@
-name: View My URL
+name: Commit Changes
 
 on:
   push:
